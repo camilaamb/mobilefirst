@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --ff-heading: 'Staatliches', cursive;
+  --ff-boding: 'Palanquin', sans-serif;
+  --bg-primary: #EFF1FF;
+  --bg-secundary: #8E9AAF;
+  --fc-primary: #ffffff;
+}
+
+body {
+  background-color: var(--bg-primary);
+}
+
+header {
+  background: var(--bg-secundary);
+
+  width: 100%;
+  height: 27.9rem;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+header img {
+  margin: 3.2rem auto;
+  width: 13.7rem;
+  height: 13.7rem;
+}
+
+header h1 {
+  font-family: var(--ff-heading);
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+  color: var(--fc-primary);
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+  text-align: center; 
+  
+  background: #CBC0D3;
+  height: 4.9rem;
+  margin-bottom: 2.9rem;
+  padding: 1rem;
+}
+
+main {
+  width: 100%;
+  height: 164.2rem;
+  margin: 0 auto 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.6rem;
+  align-items: center;
+}
+
+main p {
+  max-width: 30.5rem;
+  height: 7.5rem;
+  font-family: var(--ff-boding);
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+  color: #23053A;
+
+  text-align: center;
+  margin: 1.4rem 3.2rem 2.7rem;
+}
+
+main .card {
+  padding: 0 3.2rem;
+  position: relative;
+}
+
+main .card img {
+  border-radius: 2.0rem;
+  width: 100%;
+
+  animation-name: downtop;
+  animation-duration: 1s;
+}
+
+main .card h2 {
+  font-family: var(--ff-heading);
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3.4rem;
+  color: #4A4E69;
+
+  position: absolute;
+  top: 1.6rem;
+  right: 4.6rem;
+  background: #FEEAFA;
+  padding: 0 2.3rem;
+  border-radius: 2rem;
+  height: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+
+  animation-name: topdown;
+  animation-duration: 1s;
+}
+
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downtop {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
